@@ -1,0 +1,105 @@
+.chatflowsPage {
+  padding: 24px;
+  background-color: #f7f8fa;
+}
+
+.pageHeader {
+  margin-bottom: 16px;
+}
+
+.pageHeader :global(.ant-typography) {
+  margin: 0;
+}
+
+.pageHeader :global(.ant-typography + .ant-typography) {
+  margin-top: 4px;
+  color: #595959;
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* 让搜索框在工具栏中自适应占位 */
+.actionBar :global(.ant-input-affix-wrapper) {
+  flex: 1;
+  max-width: 560px;
+}
+
+.workflowsContainer {
+  margin-top: 8px;
+}
+
+/* 网格卡片 */
+.workflowCard {
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workflowCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* 调整 Card 内部排版 */
+.workflowCard :global(.ant-card-body) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+}
+
+.cardIcons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8c8c8c;
+}
+
+/* 列表视图 */
+.listView {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.workflowListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.workflowListItem:hover {
+  background-color: #fafafa;
+  border-color: #e8e8e8;
+}
+
+.listItemIcons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8c8c8c;
+}
+
+/* 小屏适配 */
+@media (max-width: 576px) {
+  .actionBar {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .actionBar :global(.ant-input-affix-wrapper) {
+    min-width: 100%;
+  }
+}
